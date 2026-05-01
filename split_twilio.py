@@ -9,10 +9,16 @@ from anthropic import Anthropic
 app = Flask(__name__)
 anthropic = Anthropic()
 
-TWILIO_ACCOUNT_SID = os.environ["TWILIO_ACCOUNT_SID"]
-TWILIO_AUTH_TOKEN = os.environ["TWILIO_AUTH_TOKEN"]
+print("ENV KEYS:", list(os.environ.keys()))
+
+TWILIO_ACCOUNT_SID = os.environ.get("TWILIO_ACCOUNT_SID", "")
+TWILIO_AUTH_TOKEN = os.environ.get("TWILIO_AUTH_TOKEN", "")
 TWILIO_NUMBER = os.environ.get("TWILIO_NUMBER", "+19784048707")
-twilio = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
+
+print("SID present:", bool(TWILIO_ACCOUNT_SID))
+print("TOKEN present:", bool(TWILIO_AUTH_TOKEN))
+
+twilio = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN) if TWILIO_ACCOUNT_SID else None
 
 DATA_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data.json")
 
