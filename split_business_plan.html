@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Split – Business Plan 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: #111;
+    background: #fff;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  @media print {
+    .page-break { page-break-before: always; }
+    body { font-size: 12px; }
+  }
+
+  .cover {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px;
+    background: #0a0a0a;
+    color: #fff;
+  }
+
+  .cover-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 24px;
+  }
+
+  .cover h1 {
+    font-size: 72px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .cover-sub {
+    font-size: 22px;
+    color: #aaa;
+    font-weight: 300;
+    margin-bottom: 60px;
+    max-width: 500px;
+  }
+
+  .cover-meta {
+    display: flex;
+    gap: 48px;
+    border-top: 1px solid #222;
+    padding-top: 32px;
+  }
+
+  .cover-meta-item label {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #555;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .cover-meta-item span {
+    font-size: 14px;
+    color: #eee;
+    font-weight: 500;
+  }
+
+  .content {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 72px 48px;
+  }
+
+  h2 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+    margin-top: 56px;
+    color: #000;
+  }
+
+  h2:first-child { margin-top: 0; }
+
+  h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 32px;
+    margin-bottom: 8px;
+    color: #000;
+  }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  p { margin-bottom: 14px; color: #333; }
+
+  ul, ol {
+    padding-left: 20px;
+    margin-bottom: 14px;
+    color: #333;
+  }
+
+  li { margin-bottom: 6px; }
+
+  .divider {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 40px 0;
+  }
+
+  /* Stat cards */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 24px 0;
+  }
+
+  .stat-card {
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .stat-card .value {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #000;
+    margin-bottom: 2px;
+  }
+
+  .stat-card .label {
+    font-size: 11px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* Table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 12.5px;
+  }
+
+  th {
+    text-align: left;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #999;
+    padding: 8px 12px;
+    border-bottom: 1px solid #eee;
+  }
+
+  td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #f5f5f5;
+    color: #333;
+    vertical-align: top;
+  }
+
+  tr:last-child td { border-bottom: none; }
+
+  .td-bold { font-weight: 600; color: #000; }
+
+  /* Timeline */
+  .timeline { margin: 24px 0; }
+
+  .timeline-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+
+  .timeline-marker {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #000;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+  }
+
+  .timeline-content h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .timeline-content p {
+    margin: 0;
+    font-size: 12.5px;
+    color: #555;
+  }
+
+  /* Callout */
+  .callout {
+    background: #f9f9f9;
+    border-left: 3px solid #000;
+    padding: 16px 20px;
+    border-radius: 0 8px 8px 0;
+    margin: 20px 0;
+  }
+
+  .callout p { margin: 0; font-size: 13px; color: #222; }
+
+  /* Pricing cards */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 24px 0;
+  }
+
+  .pricing-card {
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 24px;
+  }
+
+  .pricing-card.featured {
+    border-color: #000;
+    background: #000;
+    color: #fff;
+  }
+
+  .pricing-card .tier {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 8px;
+  }
+
+  .pricing-card.featured .tier { color: #666; }
+
+  .pricing-card .price {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 4px;
+  }
+
+  .pricing-card .price-sub {
+    font-size: 11px;
+    color: #999;
+    margin-bottom: 16px;
+  }
+
+  .pricing-card.featured .price-sub { color: #666; }
+
+  .pricing-card ul {
+    padding-left: 0;
+    list-style: none;
+    font-size: 12px;
+  }
+
+  .pricing-card li {
+    padding: 4px 0;
+    border-top: 1px solid #f0f0f0;
+    color: #444;
+  }
+
+  .pricing-card.featured li {
+    border-top-color: #222;
+    color: #ccc;
+  }
+
+  .pricing-card li:first-child { border-top: none; }
+
+  /* Revenue projection table */
+  .projection-table td:not(:first-child) {
+    text-align: right;
+  }
+
+  .green { color: #16a34a; font-weight: 600; }
+  .gray { color: #aaa; }
+
+  footer {
+    text-align: center;
+    padding: 40px;
+    color: #ccc;
+    font-size: 11px;
+    border-top: 1px solid #f0f0f0;
+    margin-top: 60px;
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-eyebrow">Confidential Business Plan</div>
+  <h1>Split</h1>
+  <p class="cover-sub">The expense tracking bot that lives in your texts. No app. No login. Just send a message.</p>
+  <div class="cover-meta">
+    <div class="cover-meta-item">
+      <label>Founded</label>
+      <span>2026</span>
+    </div>
+    <div class="cover-meta-item">
+      <label>Founder</label>
+      <span>Taiki Ishikawa</span>
+    </div>
+    <div class="cover-meta-item">
+      <label>Stage</label>
+      <span>Pre-seed / MVP</span>
+    </div>
+    <div class="cover-meta-item">
+      <label>Market</label>
+      <span>US Consumers</span>
+    </div>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="content">
+
+  <!-- EXECUTIVE SUMMARY -->
+  <span class="section-label">01 — Executive Summary</span>
+  <h2>The one-line pitch</h2>
+  <p>Split is an AI-powered expense tracking bot you use over SMS — no app download, no account creation, no friction. You text a number, the bot tracks who owes who, and replies instantly with updated balances.</p>
+
+  <div class="callout">
+    <p><strong>The insight:</strong> Splitwise has 50M+ users but requires an app install and account. 80% of casual expense tracking happens between 2–5 friends who would never download an app just to split a dinner. Split captures that market entirely through SMS.</p>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat-card">
+      <div class="value">$0</div>
+      <div class="label">Cost to try it</div>
+    </div>
+    <div class="stat-card">
+      <div class="value">&lt;30s</div>
+      <div class="label">Time to first use</div>
+    </div>
+    <div class="stat-card">
+      <div class="value">100%</div>
+      <div class="label">SMS compatible phones</div>
+    </div>
+  </div>
+
+  <hr class="divider"/>
+
+  <!-- PROBLEM -->
+  <span class="section-label">02 — Problem</span>
+  <h2>People hate splitting bills</h2>
+  <p>Every group of friends has an informal ledger living in someone's head. Someone paid for Ubers. Someone else covered groceries. By the end of the trip, nobody agrees on what's owed and the friendship gets awkward.</p>
+
+  <p>Existing solutions have real barriers:</p>
+  <ul>
+    <li><strong>Splitwise</strong> — requires app install, account creation, and both parties to be on the app</li>
+    <li><strong>Venmo/Cash App</strong> — handles payments but not tracking; you still need to calculate what's owed</li>
+    <li><strong>Spreadsheets</strong> — nobody updates them consistently</li>
+    <li><strong>Notes app</strong> — no calculation, no reminders, instant chaos</li>
+  </ul>
+
+  <p>The gap: a tool that requires zero setup from anyone in the group and works on every phone that already exists.</p>
+
+  <hr class="divider"/>
+
+  <!-- SOLUTION -->
+  <span class="section-label">03 — Solution</span>
+  <h2>Split: expense tracking via text</h2>
+  <p>Split works through a single phone number. Anyone can text it in plain English:</p>
+
+  <table>
+    <tr>
+      <th>You text</th>
+      <th>Split replies</th>
+    </tr>
+    <tr>
+      <td>"I paid $80 for Ubers split 4 ways"</td>
+      <td>"Added $80 for Ubers. Each owes $20.<br>Balances: Jake $20, Sofia $20, Mia $20"</td>
+    </tr>
+    <tr>
+      <td>"Jake owes me $35 for groceries"</td>
+      <td>"Got it. Jake now owes you $55 total."</td>
+    </tr>
+    <tr>
+      <td>"I paid Jake back $55"</td>
+      <td>"Settled. All squared up ✓"</td>
+    </tr>
+    <tr>
+      <td>"show balances"</td>
+      <td>"Balances: Sofia owes $20, Mia owes $20"</td>
+    </tr>
+  </table>
+
+  <p>Powered by Claude (Anthropic's AI), Split understands natural language — no commands to memorize, no syntax to learn.</p>
+
+  <hr class="divider"/>
+
+  <!-- MARKET -->
+  <span class="section-label">04 — Market Opportunity</span>
+  <h2>A large market hiding in plain sight</h2>
+
+  <div class="stat-grid">
+    <div class="stat-card">
+      <div class="value">270M</div>
+      <div class="label">SMS users in the US</div>
+    </div>
+    <div class="stat-card">
+      <div class="value">50M+</div>
+      <div class="label">Splitwise registered users</div>
+    </div>
+    <div class="stat-card">
+      <div class="value">$4.2B</div>
+      <div class="label">Fintech personal finance app market (2025)</div>
+    </div>
+  </div>
+
+  <h3>Target segments</h3>
+  <ul>
+    <li><strong>College students</strong> — roommates, house trips, bar tabs, spring break. High frequency, high social density, fast word-of-mouth.</li>
+    <li><strong>Young professionals (22–35)</strong> — dinners, vacations, shared subscriptions. Already comfortable texting for everything.</li>
+    <li><strong>Group travelers</strong> — anyone planning a trip with 4+ people has this problem acutely.</li>
+    <li><strong>Housemates</strong> — recurring expenses (utilities, groceries, rent top-ups) need ongoing tracking.</li>
+  </ul>
+
+  <hr class="divider"/>
+
+  <!-- GO TO MARKET -->
+  <span class="section-label">05 — Go-To-Market</span>
+  <h2>Distribution strategy</h2>
+
+  <h3>Phase 1 — Organic (0 to 500 users)</h3>
+  <p>Don't spend money. Every early user should come from personal networks and organic channels:</p>
+  <ul>
+    <li><strong>Viral loop built into the product:</strong> When someone adds a friend to a Split group, that friend receives a text from the Split number saying "[Friend's name] added you to Split. You currently owe $X. Text START to join." This turns every expense log into a free acquisition event.</li>
+    <li><strong>College campus seeding:</strong> Post in Facebook housing groups, Reddit (r/UChicago, r/college, etc.), Discord servers for dorms and friend groups. One good post can drive 50–100 sign-ups.</li>
+    <li><strong>Personal use:</strong> Use Split yourself for every expense. Show friends. The demo sells itself — "just text this number."</li>
+  </ul>
+
+  <h3>Phase 2 — Content (500 to 5,000 users)</h3>
+  <ul>
+    <li><strong>Short-form video:</strong> 15-second TikTok/Reels showing the product in real use. "POV: your friend group finally has a way to track who owes what." No ad spend needed — just genuine product demos.</li>
+    <li><strong>Reddit:</strong> Share in r/personalfinance, r/frugal, r/college as a genuinely useful tool, not an ad.</li>
+    <li><strong>Product Hunt launch</strong> when the product is polished enough.</li>
+  </ul>
+
+  <h3>Phase 3 — Paid acquisition (5,000+ users)</h3>
+  <ul>
+    <li>Instagram and TikTok ads targeting college students and young adults ages 18–28</li>
+    <li>Google search ads for "split bill app", "expense tracker friends", "who owes who app"</li>
+    <li>Referral program: give a month of Pro free for every friend you get to sign up</li>
+  </ul>
+
+  <hr class="divider"/>
+
+  <!-- PRICING -->
+  <span class="section-label">06 — Pricing Model</span>
+  <h2>Freemium, priced by group size</h2>
+
+  <p>The right model is freemium by group capacity — not by interaction count. Charging per message frustrates users and kills retention. Charging for larger groups scales with real value delivered.</p>
+
+  <div class="pricing-grid">
+    <div class="pricing-card">
+      <div class="tier">Free</div>
+      <div class="price">$0</div>
+      <div class="price-sub">forever</div>
+      <ul>
+        <li>1 active group</li>
+        <li>Up to 3 people</li>
+        <li>Unlimited expenses</li>
+        <li>Balance tracking</li>
+        <li>Last 10 transactions</li>
+      </ul>
+    </div>
+    <div class="pricing-card featured">
+      <div class="tier">Pro</div>
+      <div class="price">$3</div>
+      <div class="price-sub">per month</div>
+      <ul>
+        <li>Unlimited groups</li>
+        <li>Up to 10 people per group</li>
+        <li>Full transaction history</li>
+        <li>Monthly summary text</li>
+        <li>Expense export (CSV)</li>
+      </ul>
+    </div>
+    <div class="pricing-card">
+      <div class="tier">Team</div>
+      <div class="price">$8</div>
+      <div class="price-sub">per month</div>
+      <ul>
+        <li>Everything in Pro</li>
+        <li>Unlimited people</li>
+        <li>Custom bot name/number</li>
+        <li>Venmo/Zelle deep links</li>
+        <li>Priority support</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p><strong>Why $3/month:</strong> At $3, two friends splitting the cost means each pays $1.50 — less than a coffee. This removes price as a barrier for the core user. At scale, $3 × 10,000 users = $30,000 MRR.</p>
+  </div>
+
+  <hr class="divider"/>
+
+  <!-- REVENUE PROJECTIONS -->
+  <span class="section-label">07 — Revenue Projections</span>
+  <h2>Path to profitability</h2>
+
+  <p>Assumptions: 15% free-to-paid conversion, average paid user pays $3/month (mostly Pro tier), 5% monthly churn. Costs include Twilio SMS (~$0.0079/message), Claude API (~$0.001/message at Haiku pricing), and Railway hosting ($5–20/month).</p>
+
+  <table class="projection-table">
+    <tr>
+      <th>Milestone</th>
+      <th>Total Users</th>
+      <th>Paid Users</th>
+      <th>MRR</th>
+      <th>Monthly Cost</th>
+      <th>Monthly Profit</th>
+    </tr>
+    <tr>
+      <td class="td-bold">Launch (Month 1–2)</td>
+      <td>50</td>
+      <td>0</td>
+      <td class="gray">$0</td>
+      <td>~$15</td>
+      <td class="gray">-$15</td>
+    </tr>
+    <tr>
+      <td class="td-bold">Early traction (Month 3–4)</td>
+      <td>250</td>
+      <td>20</td>
+      <td>$60</td>
+      <td>~$40</td>
+      <td class="green">+$20</td>
+    </tr>
+    <tr>
+      <td class="td-bold">Campus spread (Month 6)</td>
+      <td>1,000</td>
+      <td>150</td>
+      <td>$450</td>
+      <td>~$120</td>
+      <td class="green">+$330</td>
+    </tr>
+    <tr>
+      <td class="td-bold">Product-market fit (Month 9)</td>
+      <td>5,000</td>
+      <td>750</td>
+      <td>$2,250</td>
+      <td>~$400</td>
+      <td class="green">+$1,850</td>
+    </tr>
+    <tr>
+      <td class="td-bold">Scale (Month 12)</td>
+      <td>15,000</td>
+      <td>2,250</td>
+      <td>$6,750</td>
+      <td>~$900</td>
+      <td class="green">+$5,850</td>
+    </tr>
+    <tr>
+      <td class="td-bold">Growth (Month 18)</td>
+      <td>50,000</td>
+      <td>7,500</td>
+      <td>$22,500</td>
+      <td>~$2,500</td>
+      <td class="green">+$20,000</td>
+    </tr>
+  </table>
+
+  <p>At 50,000 users the business is generating $240,000 ARR with &gt;88% gross margins — well within the range of a fundable SaaS company or a profitable solo product.</p>
+
+  <hr class="divider"/>
+
+  <!-- ROADMAP -->
+  <div class="page-break"></div>
+  <span class="section-label">08 — Product Roadmap</span>
+  <h2>What gets built when</h2>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-marker">1</div>
+      <div class="timeline-content">
+        <h4>Now — MVP (Complete)</h4>
+        <p>SMS bot running on Twilio, AI expense parsing via Claude, balance tracking, undo, history, name registration. Deployed and working.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-marker">2</div>
+      <div class="timeline-content">
+        <h4>Month 1 — Multi-person groups</h4>
+        <p>Group creation via SMS ("create group TRIP"), adding members by phone number, shared ledger across all group members. This is the core viral mechanic — when you're added to a group, you get a text.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-marker">3</div>
+      <div class="timeline-content">
+        <h4>Month 2 — Payments integration</h4>
+        <p>When someone settles up, reply includes a pre-filled Venmo deeplink and Zelle instructions. Removes the last friction point between "tracking" and "actually getting paid."</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-marker">4</div>
+      <div class="timeline-content">
+        <h4>Month 3 — Monthly summaries</h4>
+        <p>Auto-text every group member on the 1st with their running balance and a nudge to settle. Drives retention and re-engagement without any user action required.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-marker">5</div>
+      <div class="timeline-content">
+        <h4>Month 4 — Web dashboard</h4>
+        <p>Read-only ledger page at split.app/[group-code] showing full history, charts, and export. This is the paywall hook — free users see a blurred/limited view, Pro users get everything.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-marker">6</div>
+      <div class="timeline-content">
+        <h4>Month 6 — Stripe billing</h4>
+        <p>In-text upgrade flow: "Text UPGRADE to go Pro for $3/month." Stripe handles billing. No web signup required — the entire purchase happens over SMS.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-marker">7</div>
+      <div class="timeline-content">
+        <h4>Month 9+ — WhatsApp & iMessage</h4>
+        <p>Expand beyond SMS. WhatsApp Cloud API (free tier) opens international markets. iMessage integration keeps Apple-heavy US users in their preferred app.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider"/>
+
+  <!-- COMPETITIVE -->
+  <span class="section-label">09 — Competitive Landscape</span>
+  <h2>Why Split wins</h2>
+
+  <table>
+    <tr>
+      <th>Product</th>
+      <th>App required?</th>
+      <th>Both parties need account?</th>
+      <th>AI parsing?</th>
+      <th>Works over SMS?</th>
+    </tr>
+    <tr>
+      <td class="td-bold">Split</td>
+      <td>No</td>
+      <td>No</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td class="td-bold">Splitwise</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td class="td-bold">Venmo</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td class="td-bold">Tab (app)</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Partial</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td class="td-bold">Notes / spreadsheet</td>
+      <td>No</td>
+      <td>No</td>
+      <td>No</td>
+      <td>No</td>
+    </tr>
+  </table>
+
+  <p>Split's moat is frictionlessness. Every competing product requires both parties to have an account before the first dollar is tracked. Split requires nothing — you text, it works.</p>
+
+  <hr class="divider"/>
+
+  <!-- RISKS -->
+  <span class="section-label">10 — Risks & Mitigations</span>
+  <h2>What could go wrong</h2>
+
+  <table>
+    <tr>
+      <th>Risk</th>
+      <th>Likelihood</th>
+      <th>Mitigation</th>
+    </tr>
+    <tr>
+      <td class="td-bold">Twilio A2P campaign rejected again</td>
+      <td>Low — resubmitted with correct opt-in flow</td>
+      <td>Backup: Textbelt, Sinch, or WhatsApp Cloud API</td>
+    </tr>
+    <tr>
+      <td class="td-bold">Splitwise copies the SMS feature</td>
+      <td>Medium — they have resources</td>
+      <td>Speed to market; build loyal user base before they notice</td>
+    </tr>
+    <tr>
+      <td class="td-bold">Claude API costs spike at scale</td>
+      <td>Low — Haiku pricing is very cheap</td>
+      <td>Cache common responses; add rate limiting for free tier</td>
+    </tr>
+    <tr>
+      <td class="td-bold">SMS spam filters block messages</td>
+      <td>Medium — carriers are aggressive</td>
+      <td>A2P 10DLC registration + clean opt-in flow already in place</td>
+    </tr>
+    <tr>
+      <td class="td-bold">Low paid conversion</td>
+      <td>Medium</td>
+      <td>Strong free tier builds habit; paywall at point of real group utility</td>
+    </tr>
+  </table>
+
+  <hr class="divider"/>
+
+  <!-- FOUNDER -->
+  <span class="section-label">11 — Founder</span>
+  <h2>Taiki Ishikawa</h2>
+  <p>Built the full Split MVP from scratch — AI parsing, SMS integration, expense logic, infrastructure — in a single session. Based in Chicago. Understands the target market from the inside as a college student who has felt this problem firsthand.</p>
+
+  <div class="callout">
+    <p><strong>Unfair advantage:</strong> The product exists and works today. No funding needed to reach the first 1,000 users. Cost to run the MVP is under $20/month.</p>
+  </div>
+
+  <hr class="divider"/>
+
+  <!-- NEXT STEPS -->
+  <span class="section-label">12 — Immediate Next Steps</span>
+  <h2>This week's priorities</h2>
+
+  <ol>
+    <li><strong>Get Twilio campaign approved</strong> — currently under review, expected 24–48 hours</li>
+    <li><strong>Deploy bot to Railway</strong> — move off local Mac to a 24/7 server (free tier available)</li>
+    <li><strong>Give number to 10 friends</strong> — get real feedback before building more</li>
+    <li><strong>Build multi-person group SMS flow</strong> — biggest feature gap from Splitwise</li>
+    <li><strong>Set up Stripe</strong> — even if you don't charge yet, have it ready</li>
+  </ol>
+
+</div>
+
+<footer>
+  Split — Confidential. April 2026. Contact: taiki.ishikawa2005@gmail.com
+</footer>
+
+</body>
+</html>
