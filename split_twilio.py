@@ -327,10 +327,11 @@ def sms_webhook():
             group["balances"][sender] = 0.0
         save_data(data)
         resp.message(
-            "Welcome to Split! 💸\n"
-            "Track expenses with friends over text.\n\n"
-            "Text 'I'm [name]' to set your name.\n"
-            "Text 'help' for all commands."
+            "Split: You're now subscribed to expense tracking notifications. "
+            "Msg frequency varies. Msg & data rates may apply. "
+            "Reply STOP to unsubscribe, HELP for help.\n"
+            "Terms: https://ishikawatadashitakashi.github.io/split/#terms\n\n"
+            "Text 'I'm [name]' to set your name. Text 'help' for commands."
         )
         return str(resp)
 
